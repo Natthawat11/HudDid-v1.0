@@ -1,0 +1,201 @@
+/* รีเซ็ตค่าพื้นฐาน */
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* รูปแบบสำหรับ body */
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh; /* ครอบคลุมความสูงทั้งหน้าจอ */
+    display: flex;
+    flex-direction: column;
+}
+
+/* กรอบด้านบน */
+/* กรอบด้านบน */
+.top-bar {
+    height: 150px;
+    background: url('../image/topbar.png') no-repeat center center; /* ใส่ URL ของรูปที่คุณต้องการ */
+    background-size: cover; /* ทำให้รูปปรับขนาดเต็มพื้นที่ */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.top-bar img {
+    height: 100px;
+    width: auto;
+    margin-right: 20px;
+    border: 3px solid white; /* ขอบสีขาว */
+    border-radius: 50%; /* รูปทรงกลม */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* เงา */
+    transition: transform 0.3s ease;
+}
+.top-bar img:hover {
+    transform: scale(1.1); /* ขยายเมื่อชี้เมาส์ */
+}
+
+.top-bar h1 {
+    font-size: 1.8em;
+    color: black;
+}
+
+/* คอนเทนเนอร์หลัก */
+.container {
+    display: flex;
+    flex: 1; /* ใช้พื้นที่ทั้งหมดที่เหลือ */
+}
+
+/* กรอบด้านซ้าย */
+.side-bar {
+    background: linear-gradient(180deg, #76c7c0, #63b4ff); /* ไล่สี */
+    width: 250px; /* ความกว้างคงที่ */
+    color: white;
+    padding: 20px;
+    border-right: 3px solid #4a90e2;
+    overflow-y: auto; /* เพิ่ม Scrollbar หากเนื้อหายาวเกิน */
+}
+
+.side-bar h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    border-bottom: 2px solid white;
+    padding-bottom: 10px;
+}
+
+.side-bar a {
+    text-decoration: none;
+    color: #ffe500;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.side-bar a:hover {
+    color: #ff4d4d;
+}
+
+/* เนื้อหากลาง */
+.content {
+    flex: 1; /* ใช้พื้นที่ที่เหลือจาก Side Bar */
+    padding: 20px;
+    background-color: #ecf0f1; /* สีพื้นหลังเนื้อหา */
+    overflow-y: auto;
+}
+
+.content h2 {
+    color: #34495e;
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+/* รูปแบบสำหรับรูปภาพคอร์ดพื้นฐาน */
+.content center {
+    display: flex; /* ใช้ Flexbox */
+    flex-wrap: wrap; /* จัดรูปภาพให้อยู่ในหลายแถว */
+    justify-content: center; /* จัดให้อยู่ตรงกลาง */
+    gap: 20px; /* ระยะห่างระหว่างรูป */
+    margin-top: 20px; /* ระยะห่างจากหัวข้อ */
+}
+
+.content img {
+    width: 200px; /* กำหนดความกว้างใหญ่ขึ้น */
+    height: auto; /* รักษาสัดส่วน */
+    border: 3px solid #4a90e2; /* ขอบสีฟ้า */
+    border-radius: 8px; /* มุมโค้ง */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content img:hover {
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อชี้เมาส์ */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อชี้เมาส์ */
+}
+
+.content h2 {
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+    margin-bottom: 10px; /* ระยะห่างระหว่างหัวข้อกับรูป */
+}
+/* วิดีโอ Pop-up */
+.video-popup {
+    display: none; /* ซ่อน Pop-up เป็นค่าเริ่มต้น */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* สีพื้นหลังโปร่งแสง */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.video-content {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.video-content video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#close-video {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #000;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#close-video:hover {
+    color: red;
+}
+/* ทำให้ Side-Bar ปรับขนาดอัตโนมัติเมื่อหน้าจอเล็ก */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .side-bar {
+        width: 100%;
+        text-align: center;
+    }
+    .content {
+        padding: 15px;
+    }
+}
+
+/* เพิ่มเอฟเฟกต์การเปลี่ยนสีของปุ่ม */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}

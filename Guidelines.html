@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>บทเรียน</title>
+    <link rel="stylesheet" href="CSS/styles6.css" />
+    <link rel="icon" type="image/x-icon" href="image/icon.png" />
+  </head>
+
+  <body>
+    <body>
+    <div class="top-bar">
+        <img src="image/WWW.HUDDID.COM.png" alt="Guitar Logo">
+        <h1>HudDid.com</h1>
+    </div>
+
+    <div class="container">
+        <div class="side-bar">
+            <h2>แนะนำ</h2>
+            <ul>
+                <li><a href="index.html">หน้าแรก</a></li>
+                <li><a href="Producer.html">ผู้จัดทำ</a></li>
+                <li><a href="donate.html">สนับสนุน</a></li>
+            </ul>
+
+            <h2>บทเรียน</h2>
+            <ul>
+                <li><a href="chord.html">คอร์ดพื้นฐาน</a></li>
+                <li><a href="Guidelines.html">บทเรียน</a></li>
+            </ul>
+        </div>
+
+        <div class="content">
+   <!-- ส่วนแสดงวิดีโอ -->
+<div class="lesson-container">
+  <h2>วิดีโอสอนดีดกีตาร์</h2>
+
+  <!-- วิดีโอขนาดเล็ก -->
+  <div class="video-preview">
+    <img id="preview-thumbnail" src="image/เริ่มเรียนได้เลยครับ.png" alt="Preview Video">
+      <button id="open-modal">🎸 ดูวิดีโอ</button>
+  </div>
+  <a href="https://www.youtube.com/@Nokdamstudio/" target="_blank" class="credit-button">
+    🎥 เครดิตวิดีโอ
+</a>
+</div>
+
+<!-- Modal Popup สำหรับวิดีโอ -->
+<div id="video-modal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>ระดับปัจจุบัน: <span id="current-level">Level 1</span></h2>
+      <div class="video-wrapper">
+          <button id="prev-level">◀ Level ก่อนหน้า</button>
+          <iframe id="lesson-video" width="560" height="315" 
+    src="" frameborder="0" 
+    allow="autoplay; encrypted-media" allowfullscreen>
+</iframe>
+
+          <button id="next-level">Level ถัดไป ▶</button>
+      </div>
+  </div>
+</div>
+
+
+
+<script src="JS/scripts/video-navigation.js"></script>
+
+  </body>
+</html>

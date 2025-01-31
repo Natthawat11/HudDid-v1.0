@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>คอร์ดพื้นฐาน</title>
+    <link rel="stylesheet" href="CSS/styles3.css" />
+    <link rel="icon" type="image/x-icon" href="image/icon.png" />
+  </head>
+
+  <body>
+    <div class="top-bar">
+      <img src="image/WWW.HUDDID.COM.png" alt="Guitar Logo" />
+      <h1>HudDid.com</h1>
+    </div>
+
+    <!-- โครงสร้างหลัก -->
+    <div class="container">
+      <!-- กรอบด้านซ้าย -->
+      <div class="side-bar">
+        <h2>แนะนำ</h2>
+        <ul>
+          <li><a href="index.html">หน้าแรก</a></li>
+          <li><a href="Producer.html">ผู้จัดทำ</a></li>
+          <li><a href="donate.html">สนับสนุน</a></li>
+        </ul>
+
+        <h2>บทเรียน</h2>
+        <ul>
+          <li><a href="chord.html">คอร์ดพื้นฐาน</a></li>
+          <li><a href="Guidelines.html">บทเรียน</a></li>
+      </div>
+
+      <!-- เนื้อหากลาง -->
+      <div class="content">
+        <center>
+          <h2>คอร์ดพื้นฐานที่ควรจะฝึก</h2>
+        </center>
+        <center>
+        <img src="image/1.png" alt="คอร์ด 1" data-video="video/chordC.mp4" />
+        <img src="image/2.png" alt="คอร์ด 2" data-video="video/chordG.mp4"/>
+        <img src="image/3.png" alt="คอร์ด 3" data-video="video/chordEm.mp4"/>
+        <img src="image/4.png" alt="คอร์ด 4" data-video="video/chordD.mp4"/>
+        <img src="image/5.png" alt="คอร์ด 5" data-video="video/chordDm.mp4"/>
+        <img src="image/6.png" alt="คอร์ด 6" data-video="video/chordAm.mp4"/>
+        <img src="image/7.png" alt="คอร์ด 7" data-video="video/chordA.mp4"/>
+        <img src="image/8.png" alt="คอร์ด 8" data-video="video/chordF.mp4"/>
+        <img src="image/9.png" alt="คอร์ด 9" data-video="video/chordBm.mp4"/>
+    </center>
+    <!-- วิดีโอ Pop-up -->
+  <div id="video-popup" class="video-popup">
+    <div class="video-content">
+      <span id="close-video">&times;</span>
+      <video id="popup-video" controls></video>
+    </div>
+      </div>
+    </div>
+      <!-- ลิงก์ไปยังไฟล์ JavaScript -->
+      <script src="JS/scripts/video-popup.js"></script>
+  </body>
+</html>
